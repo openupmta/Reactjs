@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eeeeee; 
+  margin-top: 150px;
+}
+.App .Header{
+  padding: 10px 5px;
+  display: flex;
+}
+.App .Filter{
+  display: flex;
+}
+.App .Filter .item{
+  margin-right: 99px;
+  margin-left: 10px;
+}
+.App .Filter .filter-all{
+  color: inherit;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px ;
+  border-radius: 3px;
+}
+
+.App .Filter .filter-active{
+  color: inherit;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px ;
+  border-radius: 3px;
+}
+.App .Filter .filter-complete{
+  color: inherit;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px ;
+  border-radius: 3px;
+}
+
+.App .Filter .filter-all:hover{
+  background-color: #eeeeee;
+}
+.App .Filter .filter-active:hover{
+  background-color: #eeeeee;
+}
+.App .Filter .filter-complete:hover{
+  background-color: #eeeeee;
+}
+
+.App .Header input{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  padding-left: 10px;
+  width: 100%;
+  border: None;
+}
+.App .Header input:focus{
+  outline: none;
+  
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

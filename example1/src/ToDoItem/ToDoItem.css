@@ -1,0 +1,19 @@
+.ToDoItem{
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 300;
+ font-size: 24px;
+ color: #4d4d4d;   
+ border-bottom: 1px solid #bebebe;
+ display: flex;
+ margin: 15px 10px 15px 10px;
+}
+.ToDoItem > p{
+    margin: 0px 0px 0px 10px;
+    padding: 10px 5x;
+    
+    border-bottom: 1px solid #bebebe;
+}
+.ToDoItem-Complete {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
