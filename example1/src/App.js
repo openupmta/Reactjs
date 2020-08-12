@@ -13,6 +13,8 @@ class App extends Component {
       ],
       newItem: ''
     }
+
+    this.inputElement = React.createRef();
     this.onKeyUp = this.onKeyUp.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onClickAll = this.onClickAll.bind(this);
@@ -67,6 +69,9 @@ class App extends Component {
     })
     
   }
+  componentDidMount(){
+    this.inputElement.current.focus();
+  }
   render() {
     const {toDoItems,newItem} = this.state;
     const totalItem = toDoItems.filter(item => item.isComplete === false).length;
@@ -76,7 +81,7 @@ class App extends Component {
         <div className="App">
           <div className="Header">
             <img src={CompletedAll} width={32} height={32} />
-            <input type="text" onChange={this.onChange} onKeyUp={this.onKeyUp} value={newItem} placeholder="Add a new item"/>
+            <input type="text" onChange={this.onChange} onKeyUp={this.onKeyUp} value={newItem} placeholder="Add a new item" ref={this.inputElement} />
           </div>
           {toDoItems.map((item,index ) =>
             <ToDoItem onClicked={this.onClickItem(item)} key={index} item={item} />
