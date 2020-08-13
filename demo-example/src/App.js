@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import TopMenu from './Components/TopMenu';
 import Products from './Pages/Products';
+import Counter from './Pages/Counter';
 const Home = () => {
   return <h2>Home</h2>;
 }
@@ -18,6 +19,9 @@ function App() {
     <Router>
       <div className="App">
         <TopMenu />
+        <Counter>
+          {(count) => <h1>{count}</h1>}
+        </Counter>
         <Route path="/" exact component={Home} />
         <Route path="/products" exact component={Products} />
       </div>
