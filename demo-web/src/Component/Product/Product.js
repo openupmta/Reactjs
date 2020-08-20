@@ -1,11 +1,9 @@
 import React,{Component} from 'react';
-// import axios from 'axios';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, Button, Container,Col,Row
+
+import { Container,Row
   } from 'reactstrap';
-import {CartConText} from '../Contexts/Cart';
-class Products extends Component{
+import ProductItem from './ProductItem';
+class Product extends Component {
     constructor(){
         super();
         this.state ={
@@ -519,46 +517,21 @@ class Products extends Component{
     }
     render() {
         const {products} = this.state;
-        const product = products[0];
         return (
             <Container>
                 <h2>Products</h2>
                 <Row>
-                {/* {products.map(product =>  */}
-                  <Col sm="4">
-                    <Card style={{margin:"10px"}}>
-                        <CardImg top width="100%" src={product.imageUrl} alt="Card image cap" />
-                        <CardBody>
-                        <CardTitle>{product.name}</CardTitle>
-                            <CardText>{product.description}</CardText>
-                            <Button>Add</Button>
-                          <CartConText.Consumer>
-                            {() => <Button>Add</Button>}
-                          </CartConText.Consumer>
-                         
-                        </CardBody>
-                    </Card>
-                  </Col>
-                {/* )} */}
+                {products.map((product,key) => {
+                    return(
+                        <ProductItem product={product} key={key}/>
+                    )
+                } 
+
+                )}
                 </Row>
-                
-                {/* sử dụng list render props hay */}
-                {/* <ListType 
-                    data={[...products.slice(6,9)]} 
-                    render = {(product) => 
-                    <Col sm="2">
-                        <Card style={{margin:"10px"}}>
-                            <CardImg top width="100%" src={product.imageUrl} alt="Card image cap" />
-                            <CardBody>
-                            <CardTitle>{product.name}</CardTitle>
-                                <CardText>{product.description}</CardText>
-                            <Button>Add</Button>
-                            </CardBody>
-                        </Card>
-                    </Col>}
-                /> */}
             </Container>
         )
     }
 }
-export default Products;
+
+export default Product;

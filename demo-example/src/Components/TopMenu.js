@@ -32,6 +32,11 @@ const TopMenu = (props) => {
                     <Link to="/products">Product</Link>
                 </NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink>
+                    <Link to="/products">Cart(0)</Link>
+                </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
