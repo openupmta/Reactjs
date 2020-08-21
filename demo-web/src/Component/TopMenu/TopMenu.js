@@ -16,7 +16,7 @@ class TopMenu extends Component {
                 <NavLink className="nav-link" to="/product">Product</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/register">Sign Up</Link>
+                <Link className="nav-link" to="/signup">Sign Up</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">Log In</Link>

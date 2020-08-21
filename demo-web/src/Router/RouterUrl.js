@@ -8,6 +8,7 @@ import {
 import Home from '../Component/Home/Home';
 import Product from '../Component/Product/Product';
 import ProductDetail from '../Component/Product/ProductDetail';
+import SignUp from '../Component/SignUp/SignUp';
 class RouterUrl extends Component {
     render() {
         return (
@@ -21,6 +22,9 @@ class RouterUrl extends Component {
                 </Route>
                 <Route exact path="/register">
                     <Register />
+                </Route>
+                <Route exact path="/signup">
+                    <SignUp />
                 </Route>
                 <Route exact path="/login">
                     <Login />
