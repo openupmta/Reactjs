@@ -7,19 +7,18 @@ class TableItem extends Component {
         else { return "User"; }
     }
     render() {
-        console.log(this.props)
         const { data, value } = this.props;
         return (
-            <tr>
+            <tr key={value}>
                 <td >{value}</td>
                 <td>{data.name}</td>
                 <td>{data.tel}</td>
                 <td>{this.permissionName(data.permission)}</td>
                 <td>
                     <div className="btn btn-warning">
-                        <i className="fa fa-edit    " />Sửa</div>
+                        <i className="fa fa-edit" />Sửa</div>
                     <div className="btn btn-danger">
-                        <i className="fa fa-delete    " />Xóa</div>
+                        <i className="fa fa-delete" />Xóa</div>
                 </td>
             </tr>
         );

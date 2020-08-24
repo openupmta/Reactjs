@@ -16,7 +16,7 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.data.map((item, key) => <TableItem data={item} value={item.id}/>)}
+                        {this.props.data.map((item, key) => <TableItem key={key} data={item} value={key}/>)}
                     </tbody>
                 </table>
             </div>
